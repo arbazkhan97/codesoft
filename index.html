@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        
+:root {
+    
+    --primary-color: #4CAF50;
+    --secondary-color: #2196F3;
+    --text-color: #fff;
+    --bg-color: #1c1c1c;
+    --navbar-color: #343a40;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+a { text-decoration: none; color: var(--secondary-color); }
+a:hover { color: #f39c12; }
+
+nav {
+    background: var(--navbar-color) !important;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.navbar-brand img {
+    max-width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}
+.navbar-nav .nav-link {
+    color: var(--text-color) !important;
+    transition: color 0.3s;
+}
+.navbar-nav .nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.about-img {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* height: 40rem; */
+}
+
+
+@media (max-width: 992px) {
+            .navbar-collapse {
+                text-align: center;
+            }
+            .navbar-nav .nav-item {
+                margin-bottom: 10px;
+            }
+        }
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    #animated-text {
+        font-size: 1.2rem;
+    }
+}
+
+#animated-text {
+    font-size: 2rem;
+    color: #f39c12;
+    font-weight: bold;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.skills-container, .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+.project-box, .skill-box {
+    background: #333;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+.project-box:hover, .skill-box:hover {
+    transform: scale(1.05);
+}
+.project-box img, .skill-box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+.project-box img:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+.resume-container {
+    text-align: center;
+    margin: 40px 0;
+}
+.resume-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.resume-btn:hover {
+    background: #f39c12;
+}
+
+.contact-container {
+    text-align: center;
+    padding: 60px 20px;
+    background: #222;
+    color: #fff;
+}
+.contact-container a {
+    color: var(--secondary-color);
+    transition: color 0.3s;
+}
+.contact-container a:hover {
+    color: #f39c12;
+}
+
+footer {
+    background: #111;
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+
+    </style>
+   
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/mnt/data/WhatsApp%20Image%202024-10-27%20at%2001.35.31_5f4aed92.jpg" alt="Logo">
+                Arbaz Khan
+            </a>
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+               
+                Arbaz Khan
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>my name is Arbaz Khan</h1>
+        <p style="color: white;" id="animated-text"></p>
+    </header>
+
+    <section id="about" class="container my-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="IMG-20240203-WA0001.jpg" alt="Arbaz Khan" class="about-img">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="mt-2" >About Me</h2>
+                <p>I am a Bachelor of Computer Application (BCA) engineering student at 
+                    Axis Colleges and a web developer with expertise in HTML, CSS, JavaScript,
+                     React.js, and SQL. Passionate about building responsive and dynamic web applications.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2  >Skills</h2>
+        <div id="Skills" class="skills-container">
+            <div class="skill-box"><img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="HTML"></div>
+            <div class="skill-box"><img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="CSS"></div>
+            <div class="skill-box"><img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" alt="JavaScript"></div>
+            <div class="skill-box"><img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React"></div>
+            <div class="skill-box"><img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="Node.js"></div>
+            <div class="skill-box"><img src="https://tse1.mm.bing.net/th?id=OIP.zjD1ZJWXWfgymLgx3dqcLAHaEK&pid=Api&P=0&h=180" alt="Node.js"></div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Projects</h2>
+        <div id="projects" class="projects-container">
+            <div class="project-box"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111320.png" alt="Airbnb">
+                
+                <h3>Airbnb Clone</h3>
+                 <p>i created this project usins HTML ,CSS ,JS,bootstrap ,node js, express js, mongodb(database)</p>
+                 <a href="https://github.com/arbazkhan97/Mejor-project">Github repo</a>
+            
+            
+            </div>
+            <div class="project-box"><img src="https://cdn-icons-png.flaticon.com/512/2920/2920325.png" alt="E-commerce">
+                
+                
+                <h3>E-commerce Website</h3> 
+                <p>i make it using html, css and bootstrap.</p>
+                <a href="https://github.com/arbazkhan97/Ecommerse-website-">Github repo</a>
+            </div>
+            <div class="project-box"><img src="https://cdn-icons-png.flaticon.com/512/921/921594.png" alt="Chat"> 
+                
+                <h3>Chat App</h3>
+                <p>i created this  project  using HTML CSS, JS, bootstrap,node js, express js, and mongodb(database). </p>
+                <a href="https://github.com/arbazkhan97/chatting-app">GitHub repo</a>
+                
+            
+            </div>
+            <div class="project-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/1163/1163657.png" alt="Weather"> 
+                
+               <h3>Weather App</h3> 
+               <p>i make it using React js and using weather api </p>
+                <a href="https://github.com/arbazkhan97/Weather-App-React-">Github repo</a>
+            
+            </div>
+            <div class="project-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/4336/4336043.png" alt="To-Do"> 
+                
+                <h3> To-Do App</h3>
+                <p>i created it using React js</p>
+                <a href="https://github.com/arbazkhan97/React-Todo-app">Github repo</a>
+                
+                </div>
+                
+        </div>
+    </section>
+
+
+    <section id="resume" class="resume-container">
+        <h2>Resume</h2>
+        <a href="Resume_10_03_2025_11_23_31_PM.pdf" download="arbazkhan resume.pdf" class="resume-btn">Download Resume</a>
+    </section>
+    <section id="contact" class="contact-container">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:arbazkhan7432@gmail.com">arbazkhan7432@gmail.com</a></p>
+        <p>Phone: <a href="tel:+918004748063">8004748063</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Arbaz Khan. All Rights Reserved.</p>
+        <p>Follow me on <a href="https://github.com/arbazkhan97" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/arbazkhan-68b732259" target="_blank">LinkedIn</a></p>
+    </footer>
+</body>
+
+<script> 
+
+const text = "I am a frontend developer!";
+    let index = 0;
+    const animatedText = document.getElementById("animated-text");
+
+    function typeWriter() {
+        if (index < text.length) {
+            animatedText.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 300);
+        }
+    }
+
+    window.onload = typeWriter;
+
+
+
+
+</script>
+</html>
